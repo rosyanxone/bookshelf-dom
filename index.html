@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <aside id="formModalCreate">
+      <form id="inputBook">
+        <h1>Masukkan Buku Baru</h1>
+        <div class="form-wrap">
+          <label for="inputBookTitle">
+            Judul buku
+            <input id="inputBookTitle" type="text" required />
+          </label>
+          <label for="inputBookAuthor">
+            Penulis buku
+            <input id="inputBookAuthor" type="text" required />
+          </label>
+          <label for="inputBookYear">
+            Tahun terbit
+            <input id="inputBookYear" type="number" required />
+          </label>
+          <label for="inputBookIsComplete" class="input-radio">
+            <input id="inputBookIsComplete" type="checkbox" />
+            Tandai sudah dibaca
+          </label>
+        </div>
+        <div class="form-action">
+          <button onclick="closeModal('formModalCreate')" type="button">
+            BATAL
+          </button>
+          <button id="bookSubmit" type="submit">SIMPAN</button>
+        </div>
+      </form>
+    </aside>
+    <aside id="formModalEdit">
+      <form id="updateBook">
+        <h1>Edit Buku</h1>
+        <div class="form-wrap">
+          <label for="updateBookTitle">
+            Judul buku
+            <input id="updateBookTitle" type="text" required />
+          </label>
+          <label for="updateBookAuthor">
+            Penulis buku
+            <input id="updateBookAuthor" type="text" required />
+          </label>
+          <label for="updateBookYear">
+            Tahun terbit
+            <input id="updateBookYear" type="number" required />
+          </label>
+          <label for="updateBookIsComplete" class="input-radio">
+            <input id="updateBookIsComplete" type="checkbox" />
+            Tandai sudah dibaca
+          </label>
+        </div>
+        <div class="form-action">
+          <button onclick="closeModal('formModalEdit')" type="button">
+            BATAL
+          </button>
+          <button id="bookUpdate" type="submit">SIMPAN</button>
+        </div>
+      </form>
+    </aside>
+    <header>
+      <nav>
+        <a href="/">Bookshelf Apps</a>
+        <form id="searchBook" class="search-field">
+          <input id="searchBookTitle" type="text" placeholder="Cari buku..." />
+          <button id="searchSubmit" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#FFFFFF"
+              height="1.5em"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+          </button>
+        </form>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Buku Belum Dibaca</h1>
+        <div class="card-wrap" id="incompleteBookshelfList"></div>
+      </section>
+      <section>
+        <h1>Buku Sudah Dibaca</h1>
+        <div class="card-wrap" id="completeBookshelfList"></div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./src/js/data.js" type="text/javascript"></script>
+    <script src="./src/js/dom.js" type="text/javascript"></script>
+    <script src="./src/js/script.js" type="text/javascript"></script>
+  </body>
+</html>

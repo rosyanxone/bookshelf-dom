@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: #232322;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  background-color: #111011;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 1026px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.search-field {
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.search-field input {
+  background-color: unset;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  width: 150px;
+}
+
+.search-field input::placeholder {
+  color: white;
+  font-size: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-field button {
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+main {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+  padding-bottom: 24px;
+}
+
+section {
+  max-width: 1026px;
+  width: 100%;
+  text-align: start;
+}
+
+main h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 30px;
+}
+
+.card {
+  padding: 16px;
+  width: 290px;
+  height: 350px;
+}
+
+.navy {
+  background-color: #144893;
+}
+
+.bright {
+  background-color: #2370E3;
+}
+
+.create-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-field h2 {
+  font-size: 26px;
+  font-weight: 400;
+  color: white;
+}
+
+.plus-icon {
+  fill: white;
+  height: 190px;
+  transition: transform .2s ease-in-out;
+}
+
+.create-field:hover {
+  cursor: pointer;
+}
+
+.create-field:hover h2 {
+  text-decoration: underline;
+}
+
+.create-field:hover .plus-icon {
+  transform: rotate(90deg);
+}
+
+.book-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  overflow-wrap: break-word;
+}
+
+.card-content h2,
+.card-content p {
+  font-size: 26px;
+  font-weight: 400;
+  color: white;
+  overflow-wrap: break-word;
+}
+
+.card-action {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: end;
+}
+
+.action {
+  background-color: white;
+  border-radius: 6px;
+  width: 40px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-action button {
+  border: 0;
+  cursor: pointer;
+}
+
+.action-icon {
+  height: 1.5em;
+}
+
+aside {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+aside form {
+  width: 620px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 35px;
+  border-radius: 12px;
+  position: relative;
+}
+
+aside form h1 {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+
+aside .form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 26px;
+}
+
+.form-wrap .input-radio {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-wrap .input-radio input {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid white;
+  outline: 2px solid black;
+  background-color: unset;
+  border-radius: 50%;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 8px;
+  margin-left: 4px;
+}
+
+.form-wrap .input-radio input:checked {
+  background-color: black;
+  border: 2px solid white;
+  outline: 2px solid black;
+}
+
+.form-wrap label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrap input {
+  font-size: 20px;
+  background-color: #D9D9D9;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.form-action {
+  display: flex;
+  gap: 10px;
+}
+
+.form-action button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 18px;
+  width: 100%;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.form-action button:hover {
+  background-color: #D9D9D9;
+}
+
+.hide {
+  display: none;
+}
